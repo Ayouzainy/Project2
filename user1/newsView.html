@@ -12,30 +12,30 @@
             </div><!-- /.row -->
 
         <!-- Content Row -->
-<div class="col-lg-12">
-<table class="table" ng-repeat="data in news">
+<div class="col-lg-12" ng-init="showNews()">
+<table class="table">
 	<tr class="active">
 		<th colspan="2"> รายละเอียดข่าวสาร </th>
 	</tr>
 	<tr>
 		<td width="100px" class="warning text-right">หัวข้อข่าว: </td>
-		<td>{{data.nName}}</td>
+		<td>{{ news.newsTitle }}</td>
 	</tr>
 	<tr>
 		<td width="100px" class="warning text-right">รายละเอียด: </td>
-		<td>{{data.nDetail}}</td>
+		<td>{{ news.newsDetail }}</td>
 	</tr>
 	<tr>
 		<td width="100px" class="warning text-right">วันที่: </td>
-		<td>{{data.nDate}}</td>
+		<td>{{ news.newsDate }}</td>
 	</tr>
   <tr>
 		<td width="100px" class="warning text-right">รูปภาพ: </td>
-		<td>{{data.nImg}}</td>
+		<td>{{ news.newsImg }}</td>
 	</tr>
   <tr>
 		<td width="100px" class="warning text-right">โดย: </td>
-		<td>{{data.nSubmit}}</td>
+		<td>{{ news.newsSubmit }}</td>
 	</tr>
 </table>
 <br>

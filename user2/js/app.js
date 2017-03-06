@@ -18,6 +18,30 @@ var myapp = angular.module('app',['chart.js','ngRoute']);
 					templateUrl:'home.html'
 				}
 			)
+		.when('/inforDrugs', {
+					templateUrl:'inforDrugs.html'
+				}
+			)
+		.when('/pathToStop', {
+					templateUrl:'pathToStop.html'
+				}
+			)
+		.when('/drugIs', {
+					templateUrl:'drugIs.html'
+				}
+			)
+		.when('/drugType', {
+					templateUrl:'drugType.html'
+				}
+			)
+		.when('/treat', {
+					templateUrl:'treat.html'
+				}
+			)
+		.when('/newsActiv', {
+					templateUrl:'newsAndactiv.html'
+				}
+			)
 		.when('/news', {
 					templateUrl:'news.html'
 				}

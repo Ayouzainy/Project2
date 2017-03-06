@@ -19,6 +19,26 @@ var myapp = angular.module('app',['ngRoute']);
 	}
 	});
 
+	myapp.controller('activList', function($route,$scope,$http,$routeParams){
+
+		$scope.getActiv = function(){
+		$http.get('db/selectactiv.php').then(function(response){
+			$scope.news = response.data;
+		});
+	}
+	});
+	myapp.controller('activView', function($route,$scope,$http,$routeParams){
+		$scope.showActiv = function(){
+		var id = $routeParams.id;
+		$http.post('db/selectactiv1.php', {'id':id}).then(function(response){
+			var emp = response.data;
+			$scope.id = id;
+			$scope.news = emp[0];
+		});
+		
+	}
+	});
+
 // การ config ค่า provider service ในที่นี้เป็นการตั้งต่าการ
 // ลิ้งค์ไปมาระหว่างไฟล์ ด้วย $routeProvider 
 	myapp.config(function($routeProvider){
@@ -63,13 +83,14 @@ var myapp = angular.module('app',['ngRoute']);
 					controller:'newsView'
 				}
 			)
-		.when('/camps', {
-					templateUrl:'camps.html'
+		.when('/activList', {
+					templateUrl:'activList.html', //โดยดึงจากไฟล์ templage ชื่อ news.html
+					controller:'newsList'
 				}
 			)
-		.when('/list', {
-					controller:'LsistCtrl',
-					templateUrl:'tpl/list.html'
+		.when('/activ/:id/show', {
+					templateUrl:'activView.html', //โดยดึงจากไฟล์ templage ชื่อ news.html
+					controller:'activView'
 				}
 			)
 

@@ -23,7 +23,7 @@ var myapp = angular.module('app',['ngRoute']);
 
 		$scope.getActiv = function(){
 		$http.get('db/selectactiv.php').then(function(response){
-			$scope.news = response.data;
+			$scope.activities = response.data;
 		});
 	}
 	});
@@ -33,7 +33,7 @@ var myapp = angular.module('app',['ngRoute']);
 		$http.post('db/selectactiv1.php', {'id':id}).then(function(response){
 			var emp = response.data;
 			$scope.id = id;
-			$scope.news = emp[0];
+			$scope.activ = emp[0];
 		});
 		
 	}
@@ -85,7 +85,11 @@ var myapp = angular.module('app',['ngRoute']);
 			)
 		.when('/activList', {
 					templateUrl:'activList.html', //โดยดึงจากไฟล์ templage ชื่อ news.html
+<<<<<<< HEAD
 					controller:'newsList'
+=======
+					controller:'activList'
+>>>>>>> a71e54fdb08a1f4460feeedd71f6a36201e73be0
 				}
 			)
 		.when('/activ/:id/show', {

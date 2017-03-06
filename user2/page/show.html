@@ -1,0 +1,30 @@
+<div class="panel panel-default" ng-init="showEmployees()">
+	<div class="panel-heading">
+		<p class="panel-title">Employee Information</p>
+	</div>
+	<div class="panel-body">
+		<table class="table table-striped">
+				<tr>
+					<th>Name</th>
+					<th>Department</th>
+					<th>Location</th>
+					<th>Status</th>
+					<th>Contact</th>
+					<th>Salary</th>
+					<th>Employee ID:</th>
+				</tr>
+			<tbody>
+				<tr>
+					<td>{{ employee.name }}</td>
+					<td>{{ employee.dept }}</td>
+					<td>{{ employee.area }}</td>
+					<td>{{ employee.status }}</td>
+					<td>{{ employee.contact }}</td>
+					<td>{{ employee.salary }}</td>
+					<td>{{ employee.id }}</td>
+				</tr>
+			</tbody>
+		</table>
+		<a ui-sref=manage class="btn btn-default">Close</a>
+	</div>
+</div>

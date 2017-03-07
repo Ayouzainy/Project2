@@ -93,6 +93,10 @@ var myapp = angular.module('app',['ngRoute']);
 					controller:'activView'
 				}
 			)
+		.when('/evaluForm_normal', {
+					templateUrl:'evaluateForm_normal.html'
+				}
+			)
 
 		.otherwise({
 			redirectTo: '/'

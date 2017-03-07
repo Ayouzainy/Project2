@@ -19,12 +19,11 @@ body {
 
 #wrapper {
     padding-left: 0;
-    background-color: #844BB8
 }
 
 #page-wrapper {
     width: 100%;
-    padding: 0;
+    padding: 35px;
     background-color: #fff;
 }
 
@@ -39,28 +38,26 @@ body {
     }
 
     #page-wrapper {
-        padding: 10px;
+        padding: 35px;
     }
 }
 
 /* Top Navigation */
 
 .top-nav {
-    padding: 0 10px;
-    background-color: #844BB8
+    padding: 0 15px;
 }
 
 .top-nav>li {
     display: inline-block;
-    float: left;
+    float: right;
 }
 
 .top-nav>li>a {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    line-height: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
     color: #FFFFFF;
-    background-color: #844BB8
 }
 
 .top-nav>li>a:hover,
@@ -69,7 +66,7 @@ body {
 .top-nav>.open>a:hover,
 .top-nav>.open>a:focus {
     color: #fff;
-    background-color: #999;
+    background-color: #ab47bc;
 }
 
 .top-nav>.open>.dropdown-menu {
@@ -79,8 +76,7 @@ body {
     border: 1px solid rgba(0,0,0,.15);
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    /*background-color: #fff;*/
-    background-color: #844BB8
+    background-color: #fff;
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
 }
@@ -119,15 +115,14 @@ ul.alert-dropdown {
 @media(min-width:768px) {
     .side-nav {
         position: fixed;
-        top: 99px;
+        top: 101px;
         left: 225px;
         width: 225px;
         margin-left: -225px;
         border: none;
         border-radius: 0;
         overflow-y: auto;
-        /* background-color: #222; */
-        background-color: #844BB8
+        background-color: #844BB8;
         bottom: 0;
         overflow-x: hidden;
         padding-bottom: 40px;
@@ -135,13 +130,13 @@ ul.alert-dropdown {
 
     .side-nav>li>a {
         width: 225px;
-        background-color: #844BB8
     }
 
     .side-nav li a:hover,
     .side-nav li a:focus {
         outline: none;
-        background-color: #999 !important;
+        color: #9d9d9d;
+        background-color: #ab47bc !important;
     }
 }
 
@@ -153,11 +148,12 @@ ul.alert-dropdown {
     display: block;
     padding: 10px 15px 10px 38px;
     text-decoration: none;
-    color: #FFFFFF;
+    color: #fff;
 }
 
 .side-nav>li>ul>li>a:hover {
-    color: #fff;
+    color: #9d9d9d;
+    background-color: #ab47bc !important;
 }
 
 /* Flot Chart Containers */

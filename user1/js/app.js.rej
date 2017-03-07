@@ -1,0 +1,14 @@
+diff a/user1/js/app.js b/user1/js/app.js	(rejected hunks)
+@@ -85,11 +85,8 @@
+ 			)
+ 		.when('/activList', {
+ 					templateUrl:'activList.html', //โดยดึงจากไฟล์ templage ชื่อ news.html
+-<<<<<<< HEAD
+-					controller:'newsList'
+-=======
+ 					controller:'activList'
+->>>>>>> a71e54fdb08a1f4460feeedd71f6a36201e73be0
++
+ 				}
+ 			)
+ 		.when('/activ/:id/show', {

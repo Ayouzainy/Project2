@@ -38,16 +38,16 @@ var myapp = angular.module('app',['chart.js','ngRoute']);
 					templateUrl:'treat.html'
 				}
 			)
+		.when('/evaluateForm', {
+					templateUrl:'evaluateForm.html'
+				}
+			)
 		.when('/newsActiv', {
 					templateUrl:'newsAndactiv.html'
 				}
 			)
 		.when('/news', {
 					templateUrl:'news.html'
-				}
-			)
-		.when('/volunteer', {
-					templateUrl:'volunteer.html'
 				}
 			)
 		.when('/register', {

@@ -86,7 +86,6 @@ var myapp = angular.module('app',['ngRoute']);
 		.when('/activList', {
 					templateUrl:'activList.html', //โดยดึงจากไฟล์ templage ชื่อ news.html
 					controller:'activList'
-
 				}
 			)
 		.when('/activ/:id/show', {

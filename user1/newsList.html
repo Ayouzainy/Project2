@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- Page Content -->
-    <div class="container" >
+    <div class="container" style="font-size: 18px">
         <!-- Call to Action Well -->
         <div class="row">
             <div class="col-xs-12">
@@ -14,28 +14,25 @@
         <!-- Content Row -->
         <div class="col-lg-12">
             <div class="col-xs-5 col-sm-6 col-lg-4"> <hr>
-                <h3 style="color: #00BFFF"> ประชาสัมพันธ์ </h3> <img class="img-responsive"  src="./img/mitchell_icon.jpg" />
+                <h3 style="color: #00BFFF;font-size: 30px"> ประชาสัมพันธ์ </h3> <img class="img-responsive"  src="./img/mitchell_icon.jpg" />
             </div> <hr>
 
-            <div class="col-xs-7 col-sm-6 col-lg-8"> <h3>ค้นหาข่าว..</h3></div> 
+            <div class="col-xs-7 col-sm-6 col-lg-8"> <h3> <i class="glyphicon glyphicon-search"></i>&nbsp;&nbsp;ค้นหาข่าว..</h3></div> 
             <div class="col-xs-7 col-sm-6 col-lg-8"> <input type="text" class="form-control " ng-model="search" placeholder="Search">
             </div>
         </div> <br>
 
         <div class="col-lg-12">
+        <br>
             <table class="table table-striped" ng-init="getNews()">
                 <thead>
                     <tr class="active">
-                        <th>ลำดับ
-                        </th>
+                        <th>ลำดับ</th>
                         
-                        <th>หัวข้อ
-                        </th>
+                        <th>หัวข้อ</th>
                         
-                        <th>วันที่
-                            </th>
-                       <th>ตัวเลือก
-                            </th>
+                        <th>วันที่</th>
+                       <th>ตัวเลือก</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,18 +41,15 @@
                         <td>{{ news.newsTitle }}</td>
                         <td>{{ news.newsDate}}</td>
                         <td>
-                            <button><a href="#/news/{{news.id}}/show">Show</a></button>
+                            <button class="btn btn-defaul" ><i class="glyphicon glyphicon-folder-open"></i><a href="#/news/{{news.id}}/show" style="font-size: 17px">&nbsp; &nbsp;แสดง</a></button>
                         </td>
                     </tr>
                 </tbody>
             </table>
+
+            <br>
+            <button class="btn btn-defaul" style="font-size: 19px"> <a href="#/newsActiv"> <i class="glyphicon glyphicon-triangle-left"></i>&nbsp;กลับ </a></button>
         </div> 
 
 
-</div> <!--Item 0-->
-
-</div><!--div class="col-lg-12"-->
-    </div><!-- /.container -->
-
-
-</body>
+</div><!-- /.container -->

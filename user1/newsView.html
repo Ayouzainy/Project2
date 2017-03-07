@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- Page Content -->
-    <div class="container" >
+    <div class="container" style="font-size: 18px">
         <!-- Call to Action Well -->
         <div class="row">
             <div class="col-xs-12">
@@ -13,32 +13,33 @@
 
         <!-- Content Row -->
 <div class="col-lg-12" ng-init="showNews()">
+<br>
 <table class="table">
-	<tr class="active">
-		<th colspan="2"> รายละเอียดข่าวสาร </th>
+	<tr class="active" style="font-size: 25px" >
+		<th colspan="2"> รายละเอียดข่าวสาร&nbsp;<i class="glyphicon glyphicon-list-alt"></i></th>
 	</tr>
 	<tr>
-		<td width="100px" class="warning text-right">หัวข้อข่าว: </td>
+		<td width="120px" class="warning text-right">หัวข้อข่าว: </td>
 		<td>{{ news.newsTitle }}</td>
 	</tr>
 	<tr>
-		<td width="100px" class="warning text-right">รายละเอียด: </td>
+		<td width="120px" class="warning text-right">รายละเอียด: </td>
 		<td>{{ news.newsDetail }}</td>
 	</tr>
 	<tr>
-		<td width="100px" class="warning text-right">วันที่: </td>
+		<td width="120px" class="warning text-right">วันที่: </td>
 		<td>{{ news.newsDate }}</td>
 	</tr>
   <tr>
-		<td width="100px" class="warning text-right">รูปภาพ: </td>
+		<td width="120px" class="warning text-right">รูปภาพ: </td>
 		<td>{{ news.newsImg }}</td>
 	</tr>
   <tr>
-		<td width="100px" class="warning text-right">โดย: </td>
+		<td width="120px" class="warning text-right">โดย: </td>
 		<td>{{ news.newsSubmit }}</td>
 	</tr>
 </table>
 <br>
-<a href="#/newsList" class="btn btn-defaul">Back </a>
+<button class="btn btn-defaul" style="font-size: 19px"> <a href="#/newsList"  > <i class="glyphicon glyphicon-backward"></i>&nbsp;ย้อนกลับ </a></button>
 
 </div>

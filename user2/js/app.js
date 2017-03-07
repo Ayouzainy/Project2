@@ -42,6 +42,10 @@ var myapp = angular.module('app',['chart.js','ngRoute']);
 					templateUrl:'evaluateForm.html'
 				}
 			)
+		.when('/quizForm', {
+					templateUrl:'quizForm.html'
+				}
+			)
 		.when('/newsActiv', {
 					templateUrl:'newsAndactiv.html'
 				}

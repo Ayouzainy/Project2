@@ -1,0 +1,7 @@
+diff a/user2/index.html b/user2/index.html	(rejected hunks)
+@@ -0,4 +0,5 @@
+ <!DOCTYPE html>
++<html lang="en" ng-app="app">
+ 
+ <head>
+ 

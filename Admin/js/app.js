@@ -13,20 +13,22 @@ var myapp = angular.module('app',['chart.js','ngRoute']);
   			];
 		});
 // news table
-	myapp.controller('newsList', function($route,$scope,$http,$routeParams){
+	// คอลโทลเลอ ข่าว 
+	myapp.controller('newsMenu', function($route,$scope,$http,$routeParams){
+		// โชว์ข่าวทั้งหมด
 		$scope.getNews = function(){
 		$http.get('db/selectnews.php').then(function(response){
 			$scope.news = response.data;
 		});
-	}
+		}
+		// ลบข่าว
 		$scope.deleteNews = function(id){
 			var id = id;
 			$http.post('db/deletenews.php', {'id':id}).then(function(response){
 				$route.reload();
 			});
 		}
-	});
-	myapp.controller('newsView', function($route,$scope,$http,$routeParams){
+		// โชว์ข่าวผ่านไอดี
 		$scope.showNews = function(){
 		var id = $routeParams.id;
 		$http.post('db/selectnewsone1.php', {'id':id}).then(function(response){
@@ -34,47 +36,38 @@ var myapp = angular.module('app',['chart.js','ngRoute']);
 			$scope.id = id;
 			$scope.news = emp[0];
 		});
-		
-	}
-	});
-	myapp.controller('newsInsert', function($route,$scope,$http,$routeParams){
-	$scope.addNews = function(info){
+		}
+		// เพิ่มข่าว
+		$scope.addNews = function(info){
 		console.log(info);
 		$http.post('db/insertnews.php', info).then(function(response){
-			window.location.href = 'http://localhost/user2/user2/#/newsMenu/news';
+			window.location.href = 'http://localhost/Admin/Admin/#/newsMenu/news';
 		});
 		
-	}
-	});
-	myapp.controller('newsView', function($route,$scope,$http,$routeParams){
-		$scope.showNews = function(){
-		var id = $routeParams.id;
-		$http.post('db/selectnewsone1.php', {'id':id}).then(function(response){
-			var n = response.data;
-			$scope.id = id;
-			$scope.news = n[0];
-		});
-		
-	}
-	});
-	myapp.controller('newsEdit', function($route,$scope,$http,$routeParams){
-		$scope.showNews = function(){
-		var id = $routeParams.id;
-		$http.post('db/selectnewsone1.php', {'id':id}).then(function(response){
-			var n = response.data;
-			$scope.id = id;
-			$scope.news = n[0];
-		});
-	}
+		}
+		// แก้ข่าว
 		$scope.editNews = function(info){
 		$http.post('db/updatenews.php', info).then(function(response){
-			window.location.href = 'http://localhost/user2/user2/#/newsMenu/news';
+			window.location.href = 'http://localhost/Admin/Admin/#/newsMenu/news';
 		});
 		
-	}
+		}
+
 	});
 
+//Activity Table
+	//Controller Activity
+	myapp.controller('activ', function($route,$scope,$http,$routeParams){
+		// โชว์กิจกรรมทั้งหมด
+		$scope.getActiv = function(){
+		$http.get('db/selectactiv.php').then(function(response){
+			$scope.atv = response.data;
+		});
+		}
+		});
 
+
+	
 	myapp.config(function($routeProvider){
 		$routeProvider
 		.when('/', {
@@ -82,38 +75,38 @@ var myapp = angular.module('app',['chart.js','ngRoute']);
 				}
 			)
 		.when('/newsMenu', {
-					templateUrl:'admin/newsMenu_admin.html'
+					templateUrl:'page/newsMenu_admin.html'
 				}
 			)
 		.when('/newsMenu/news', {
-					templateUrl:'admin/news.html',
-					controller:'newsList'
+					templateUrl:'page/news.html',
+					controller:'newsMenu'
 				}
 			)
 		.when('/newsMenu/news/:id/show', {
-					templateUrl:'admin/newsView.html', 
-					controller:'newsView'
+					templateUrl:'page/newsView.html', 
+					controller:'newsMenu'
 				}
 			)
 		.when('/newsMenu/news/insert', {
-					templateUrl:'admin/newsInsert.html',
-					controller:'newsInsert'
+					templateUrl:'page/newsInsert.html',
+					controller:'newsMenu'
 				}
 			)
 		.when('/newsMenu/news/:id/update', {
-					templateUrl:'newsEdit.html',
-					controller:'newsEdit'
+					templateUrl:'page/newsEdit.html',
+					controller:'newsMenu'
 				}
 			)
 
 		.when('/newsMenu/activ', {
-					templateUrl:'admin/activ.html',
-					controller:'activList'
+					templateUrl:'page/activ.html',
+					controller:'activ'
 				}
 			)
 		.when('/activ/insert', {
-					templateUrl:'admin/activInsert.html',
-					controller:'activInsert'
+					templateUrl:'page/activInsert.html',
+					controller:'activ'
 				}
 			)
 

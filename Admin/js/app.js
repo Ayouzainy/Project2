@@ -64,6 +64,42 @@ var myapp = angular.module('app',['chart.js','ngRoute']);
 			$scope.atv = response.data;
 		});
 		}
+		// โชว์กิจกรรมผ่านไอดี
+		$scope.showActiv = function(){
+		var id = $routeParams.id;
+		$http.post('db/selectactiv1.php', {'id':id}).then(function(response){
+			var emp = response.data;
+			$scope.id = id;
+			$scope.atv = emp[0];
+		});
+		}
+
+		// เพิ่มกิจกรรม
+		$scope.addActiv = function(info){
+		console.log(info);
+		$http.post('db/insertactiv.php', info).then(function(response){
+			window.location.href = 'http://localhost/Admin/Admin/#/newsMenu/activ';
+		});
+		
+		}
+
+		// แก้กิจกรรม
+		$scope.editActiv = function(info){
+		$http.post('db/updateactiv.php', info).then(function(response){
+			window.location.href = 'http://localhost/Admin/Admin/#/newsMenu/activ';
+		});
+		
+		}
+
+		// ลบกิจกรรม
+		$scope.deleteActiv = function(id){
+			var id = id;
+			$http.post('db/deleteactiv.php', {'id':id}).then(function(response){
+				$route.reload();
+			});
+		}
+
+
 		});
 
 
@@ -104,11 +140,26 @@ var myapp = angular.module('app',['chart.js','ngRoute']);
 					controller:'activ'
 				}
 			)
+
+		.when('/activ/:id/show', {
+					templateUrl:'page/activView.html', 
+					controller:'activ'
+				}
+			)
+
 		.when('/activ/insert', {
 					templateUrl:'page/activInsert.html',
 					controller:'activ'
 				}
 			)
+
+		.when('/activ/:id/update', {
+					templateUrl:'page/activeEdit.html',
+					controller:'activ'
+				}
+			)
+
+		
 
 		// .when('/newsMenu/newsCamp',{
 		// 			templateUrl: 'newsCamp.html'

@@ -25,13 +25,13 @@
          <div class="row"> <hr>
             <fieldset>
             <div class="col-lg-12">
-                <form role="form" class="form-horizontal" style="font-size:18px;">
+                <form role="form" class="form-horizontal" style="font-size:18px;" ng-submit="addActiv(atv)">
 
                 <div class="form-group"><!-- Form-group 1 -->
 
                     <label for="activTitle" class="col-sm-2">หัวข้อ</label>
                       <div class="col-sm-6">
-                      <input type="text" class="form-control" placeholder="พิมพ์หัวข้อข่าว">
+                      <input type="text" class="form-control" placeholder="พิมพ์หัวข้อค่าย" ng-model="atv.activTitle">
                       </div>
                 </div><!-- Form-group 1 -->
 
@@ -39,7 +39,7 @@
 
                     <label for="activDetail" class="col-sm-2">รายละเอียดค่าย</label>
                       <div class="col-sm-6">
-                      <textarea class="form-control" rows="8" placeholder="พิมพ์รายละเอียด"></textarea>
+                      <textarea class="form-control" rows="8" placeholder="พิมพ์รายละเอียด" ng-model="atv.activDetail"></textarea>
                       </div>
                 </div><!-- Form-group 2 -->
 
@@ -47,7 +47,7 @@
 
                     <label for="activDate" class="col-sm-2">วันที่ประกาศ</label>
                       <div class="col-sm-4">
-                      <input type="date" class="form-control" placeholder="พิมพ์วันที่">
+                      <input type="date" class="form-control" placeholder="พิมพ์วันที่" ng-model="atv.activDate">
                       </div>
                 </div><!-- Form-group 3-->
 
@@ -68,12 +68,12 @@
 
                     <label for="activSubmit" class="col-sm-2">โดย</label>
                       <div class="col-sm-4">
-                      <input type="text" class="form-control" placeholder="ลงชื่อผู้ประกาศ">
+                      <input type="text" class="form-control" placeholder="ลงชื่อผู้ประกาศ" ng-model="atv.activSubmit">
                       </div>
                 </div><!-- Form-group 5-->
 
                 <div class="form-group"><!-- Form-group 6 -->
-                    <a href="#/activ" class="btn btn-info" role="button" style="margin-left: 45%;font-size: 20px" ><span class="glyphicon glyphicon-save"></span> &nbsp;บันทึก</a>
+                    <button class="btn btn-info" type="submit">Save</button>
                 </div> <!-- Form-group 6 -->
 
 

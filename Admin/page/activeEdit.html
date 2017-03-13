@@ -24,15 +24,15 @@
 
          <div class="row" >
          <fieldset>
-         	<div class="col-lg-12">
+         	<div class="col-lg-12" ng-init="showActiv()">
 
-         		 <form role="form" class="form-horizontal" style="font-size:14px;">
+         		 <form role="form" class="form-horizontal" style="font-size:14px;" ng-submit="editActiv(atv)">
 
          		    <div class="form-group"><!-- Form-group 1 -->
 
                     <label for="activTitle" class="col-sm-2">หัวข้อ</label>
                       <div class="col-sm-6">
-                      <input type="text" class="form-control" placeholder="พิมพ์หัวข้อข่าว"> <text>{{ activ.activTitle }}</text>
+                      <input type="text" class="form-control" placeholder="พิมพ์หัวข้อข่าว" ng-model="atv.activTitle"> <text>{{ atv.activTitle }}</text>
                       </div>
                 </div><!-- Form-group 1 -->
 
@@ -40,8 +40,8 @@
 
                     <label for="activDetail" class="col-sm-2">รายละเอียด</label>
                       <div class="col-sm-6">
-                      <textarea class="form-control" rows="8" placeholder="พิมพ์รายละเอียด"></textarea> 
-                      <textarea>{{ activ.activDetail }}</textarea>
+                      <textarea class="form-control" rows="8" placeholder="พิมพ์รายละเอียด" ng-model="atv.activDetail"></textarea> 
+                      <textarea>{{ atv.activDetail }}</textarea>
                       </div>
                 </div><!-- Form-group 2 -->
 
@@ -49,7 +49,7 @@
 
                     <label for="activDate" class="col-sm-2">วันที่ประกาศ</label>
                       <div class="col-sm-4">
-                      <input type="date" class="form-control" placeholder="พิมพ์วันที่"> <date>{{ activ.activDate }}</date>
+                      <input type="date" class="form-control" placeholder="พิมพ์วันที่" ng-model="atv.activDate"> <date>{{ atv.activDate }}</date>
                       </div>
                 </div><!-- Form-group 3-->
 
@@ -59,7 +59,7 @@
                     <div class="col-sm-4">
                     <input type="file" name="filUpload">
                     <p class="help-block">อัพโหลดรูปภาพ&nbsp;ไฟล์.png/.jpg</p>
-                    <file>{{ activ.activImg }}</file>
+                    <file>{{ atv.activImg }}</file>
                     </div>
                     <div class="col-sm-3">
                     <input name="btnSubmit" type="submit" value="อัพโหลด">
@@ -71,12 +71,12 @@
 
                     <label for="activSubmit" class="col-sm-2">โดย</label>
                       <div class="col-sm-4">
-                      <input type="text" class="form-control" placeholder="ลงชื่อผู้ประกาศ"> <text>{{ activ.activSubmit }}</text>
+                      <input type="text" class="form-control" placeholder="ลงชื่อผู้ประกาศ" ng-model="atv.activSubmit"> <text>{{ atv.activSubmit }}</text>
                       </div>
                 </div><!-- Form-group 5-->
 
                 <div class="form-group"><!-- Form-group 6 -->
-                    <a href="#/activ" class="btn btn-info" role="button" style="margin-left: 45%;font-size: 20px" ><span class="glyphicon glyphicon-save"></span> &nbsp;บันทึก</a>
+                    <button class="btn btn-info" type="submit">Update</button>
                 </div> <!-- Form-group 6 -->
 
                  </form>
@@ -85,7 +85,7 @@
          </div>
 
          <div class="col-sm-6"><br>
-    <button class="btn btn-defaul" style="font-size: 19px"> <a href="#/activ"  > <i class="glyphicon glyphicon-backward"></i>&nbsp;ย้อนกลับ </a></button>
+    <button class="btn btn-defaul" style="font-size: 19px"> <a href="#/newsMenu/activ"  > <i class="glyphicon glyphicon-backward"></i>&nbsp;ย้อนกลับ </a></button>
 </div>
 
 

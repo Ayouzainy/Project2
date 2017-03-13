@@ -1,0 +1,132 @@
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div id="page-wrapper">
+    <!-- Page Content -->
+        <div class="container" style="color: #000000; font-size: 19px" >
+
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="img-responsive img-rounded" src="img/sirinthorn_words5.jpg" alt="ได้ทำงานช่วยเหลือคนอื่นถือว่าเป็นเกียรติทำให้เรามีความสุข สิรินธร ๒๙ พฤษภาคม ๒๕๕๖">
+            </div>
+        </div><!-- /.row -->
+        <!-- Page Heading -->
+        <div class="row"><br>
+            <div class="col-lg-12">
+            <h1 style="color:#0174DF">ข้อมูลส่วนตัว <span style="color:#000">วิทยากรจิตอาสา</span></h1>
+            </div>
+        </div><!-- /.row -->
+        <hr>
+                
+        <!-- Register Yalannanbaru -->
+        <div class="row"><br>
+        <div class="row well text">
+        <fieldset>
+            <div class="col-lg-12">
+            <!-- Register Volunteer Yalannanbaru Form -->
+            <form role="form" class="form-horizontal" style="font-size:18px;">
+
+                <div class="form-group"><!-- Form-group 1 -->
+
+                    <label for="staffName" class="col-sm-1">ชื่อ:</label>
+                      <div class="col-sm-3">
+                      <input type="text" class="form-control"><text>{{ staff.staffName }}</text>
+                      </div>
+                </div>
+
+                <div class="form-group"><!-- Form-group 2 -->
+
+                      <label for="staffLastname" class="col-sm-1">นามสกุล:</label>
+                      <div class="col-sm-3">
+                      <input type="text" class="form-control"><text>{{ staff.staffLastname }}</text>
+                      </div>
+                </div>
+
+                <div class="form-group"><!-- Form-group 3 -->
+
+                    <label for="staffGender" class="col-sm-1">เพศ:</label>
+                      <div class="col-sm-2">
+                      <input type="text" class="form-control"><text>{{ staff.staffGender }}</text>
+                      </div>
+                </div>
+
+                <div class="form-group"><!-- Form-group 4 -->
+
+                    <label for="staffAddress" class="col-sm-1">ที่อยู่:</label>
+                    <div class="col-sm-4">
+                    <textarea class="form-control" rows="3"></textarea> 
+                    <text>{{ staff.staffAddress}}</text>
+                    </div>
+                </div>
+
+                <div class="form-group"><!-- Form-group 5 -->
+                    <label for="staffDepart" class="col-sm-2">สังกัดหน่วยงาน:</label>
+                    <div class="col-sm-3">
+                      <select name="staffDepart" class="form-control">
+                      <option selected>-- เลือกสังกัดหน่วยงาน --</option>
+                      <option>หน่วยญาลันฯปัตตานี</option>
+                      <option>หน่วยญาลันฯยะลา</option>
+                      <option>หน่วยญาลันฯนราธิวาส</option>
+                      <option>หน่วยญาลันฯสงขลา</option>
+                      </select> 
+                    <option>{{ staff.staffDepart}}</option>
+                    </div>
+                </div>
+
+                <div class="form-group"><!-- Form-group 6 -->
+
+                    <label for="staffEmail" class="col-sm-1">อีเมลล์:</label>
+                    <div class="col-sm-3">
+                    <input type="text" class="form-control"><text>{{ staff.staffEmail }}</text>
+                    </div>
+                </div>
+
+                <div class="form-group"><!-- Form-group 7 -->
+                <label for="staffTel" class="col-sm-2">เบอร์โทรศัพท์:</label>
+                    <div class="col-sm-3">
+                    <input type="text" class="form-control"><text>{{ staff.staffTel }}</text>
+                    </div>
+                </div>
+
+                <div class="form-group"><!-- Form-group 8 -->
+
+                    <label for="staffUser" class="col-sm-2">ชื่อผู้ใช้:</label>
+                      <div class="col-sm-2">
+                      <input type="text" class="form-control"><text>{{ staff.staffUser }}</text>
+                      </div>
+                </div>
+
+                <div class="form-group"><!-- Form-group 9 -->
+                    <label for="staffPaswrd" class="col-sm-2">รหัสผ่าน:</label>
+                    <div class="col-sm-2">
+                    <input type="text" class="form-control">
+                    <text>{{ staff.staffPswd}}</text>
+                    </div>
+                </div>
+
+                
+                <div class="col-sm-2">
+                <button href="#/activ" class="btn btn-info" role="button" style="margin-left: 45%;font-size: 20px" ><span class="glyphicon glyphicon-edit"></span> &nbsp;แก้ไข</button>
+                </div>
+                
+
+
+            </form>
+        </div>
+        </fieldset>
+        </div>
+    </div>
+
+</div><!-- /.content -->
+        
+        <!-- Footer -->
+            <hr>
+                <footer>
+                    <div class="row">
+                        <div class="col-lg-12"><br>
+                            <p style="color: #844BB8 ;font-size: 17px" >© Yalannanbaru Anti-Drug Volunteer  2017</p>
+                        </div>
+                    </div>
+                </footer>
+    </div><!-- /.wrapper -->

@@ -71,25 +71,23 @@ var myapp = angular.module('app',['ngRoute']);
 					templateUrl:'newsAndactiv.html'
 				}
 			)
-		.when('/newsList', {
-					 // ให้กำหนด หรือสร้าง controller ชื่อ newsCtrl 
-					templateUrl:'newsList.html', //โดยดึงจากไฟล์ templage ชื่อ news.html
+		.when('/newsList', { 
+					templateUrl:'newsList.html', 
 					controller:'newsList'
 				}
 			)
 		.when('/news/:id/show', {
-					  // ให้กำหนด หรือสร้าง controller ชื่อ newsCtrl 
-					templateUrl:'newsView.html', //โดยดึงจากไฟล์ templage ชื่อ news.html
+					templateUrl:'newsView.html', 
 					controller:'newsView'
 				}
 			)
 		.when('/activList', {
-					templateUrl:'activList.html', //โดยดึงจากไฟล์ templage ชื่อ news.html
+					templateUrl:'activList.html', 
 					controller:'activList'
 				}
 			)
 		.when('/activ/:id/show', {
-					templateUrl:'activView.html', //โดยดึงจากไฟล์ templage ชื่อ news.html
+					templateUrl:'activView.html', 
 					controller:'activView'
 				}
 			)

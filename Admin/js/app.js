@@ -188,7 +188,7 @@ var myapp = angular.module('app',['chart.js','ngRoute']);
 		// เพิ่มรายชื่อวอทยากรจิตอาสา
 		$scope.addStaff = function(info){
 		console.log(info);
-		$http.post('db/insertvolunteer.php', info).then(function(response){
+		$http.post('db/insertstafflist.php', info).then(function(response){
 			window.location.href = 'http://localhost:81/project2/Admin/#/namelist';
 		});
 		

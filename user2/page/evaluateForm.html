@@ -1,0 +1,60 @@
+
+          <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    คัดกรองผู้ป่วยยาเสพติด
+                </h1>
+                        
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="img-responsive img-rounded" src="img/sirinthorn_words2.jpg" alt="ได้ทำงานช่วยเหลือคนอื่นถือว่าเป็นเกียรติทำให้เรามีความสุข สิรินธร ๒๙ พฤษภาคม ๒๕๕๖">
+         </div>
+        </div>
+        <hr>
+
+		 <!-- Page Heading -->
+
+         <div class="row" >
+         <fieldset>
+         <h3>ข้อมูลผู้ป่วย</h3><hr><br>
+         	<div class="col-lg-12">
+
+         		 <form role="form" ng-submit="addPatient(patient)" class="form-horizontal" style="font-size:14px;">
+
+         		    <div class="form-group"><!-- Form-group 1 -->
+
+         		    <label for="inputName" class="col-sm-1">ชื่อ</label>
+         		      <div class="col-sm-3">
+         		      <input type="text" class="form-control" placeholder="พิมพ์ชื่อ" ng-model="patient.name">
+         		      </div>
+
+         		      <label for="inputLastname" class="col-sm-1">นามสกุล</label>
+         		      <div class="col-sm-3">
+         		      <input type="text" class="form-control" placeholder="พิมพ์สกุล" ng-model="patient.lname">
+         		      </div>
+
+         		     
+
+         		   </div><!-- Form-group 1 -->
+
+                  <label for="inputProvince1" class="col-sm-3">ที่อยู่ภูมิลำเนาเดิม&nbsp;(จังหวัด)</label>
+                     <div class="col-sm-3">
+                     <select id="province" ng-model="patient.provice" class="form-control">
+                     <option selected>-- เลือกจังหวัด --</option>
+                     <option value="ยะลา">ยะลา</option>
+                     <option value="ปัตตานี">ปัตตานี</option>
+                     <option value="นราธิวาส">นราธิวาส</option>
+                     </select>
+                     </div>
+                     
+                    
+                     <button type="submit" ng-disabled="!patient.name || !patient.lname || !patient.provice" >เริ่มทำแบบคัดกรอง</button>
+                     
+                 </form>
+                   <!-- Button -->
+         	</div>
+         	</fieldset>
+         </div>

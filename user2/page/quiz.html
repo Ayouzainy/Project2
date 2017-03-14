@@ -1,0 +1,41 @@
+﻿
+<div class="page-header">
+        <h1>แบบคัดกรอง</h1>
+</div>
+<div id="quiz">
+    <div class="row">
+        <div class="col-md-12"><h1 class="center">{{quiz.name}}</h1><hr /></div>
+    </div>
+    
+    <div ng-show="mode=='quiz'">
+        <div ng-repeat="question in filteredQuestions">
+            <div class="label label-warning">ข้อ {{currentPage}} จาก {{totalItems}}.</div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>{{currentPage}}. <span ng-bind-html="question.Name"></span></h2>
+                </div>
+            </div>
+            <div class="row text-left options">
+                <div class="col-md-6" ng-repeat="option in question.Options">
+                    <div class="option">
+                        <label class="" for="{{option.Id}}">
+                            <input id="{{option.Id}}" type="checkbox" ng-model="option.Selected" ng-change="onSelect(question, option);" />
+                            {{option.Name}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="quizNav">
+            <div>
+               
+                <button class="btn btn-default" ng-show="config.allowBack" ng-click="goTo(currentPage - 1);">Prev</button>
+                <button class="btn btn-primary"                            ng-click="goTo(currentPage + 1);">Next</button>
+               
+            </div>
+            <br />
+            
+        </div>
+    </div>
+</div>

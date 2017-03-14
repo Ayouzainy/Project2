@@ -1,0 +1,53 @@
+     <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                           ประชาสัมพันธ์ญาลันนันบารู
+                        </h1>
+                        
+                    </div>
+                </div>
+        <!-- Call to Action Well -->
+        <div class="row">
+            <div class="col-xs-12">
+                <img class="img-responsive img-rounded" src="img/sirinthorn_words5.jpg" alt="ได้ทำงานช่วยเหลือคนอื่นถือว่าเป็นเกียรติทำให้เรามีความสุข สิรินธร ๒๙ พฤษภาคม ๒๕๕๖">
+            </div> <!-- /.col-lg-12 -->
+            </div><!-- /.row -->
+
+        <!-- Content Row -->
+<div class="col-lg-12" ng-init="showNews()">
+<br>
+<table class="table">
+	<tr class="active" style="font-size: 25px" >
+		<th colspan="2"> รายละเอียดข่าวสาร&nbsp;<i class="glyphicon glyphicon-list-alt"></i></th>
+	</tr>
+	<tr>
+		<td width="120px" class="warning text-right">หัวข้อข่าว: </td>
+		<td>{{ news.newsTitle }}</td>
+	</tr>
+	<tr>
+		<td width="120px" class="warning text-right">รายละเอียด: </td>
+		<td>{{ news.newsDetail }}</td>
+	</tr>
+	<tr>
+		<td width="120px" class="warning text-right">วันที่ ประกาศ: </td>
+		<td>{{ news.newsDate }}</td>
+	</tr>
+  <tr>
+		<td width="120px" class="warning text-right">รูปภาพ: </td>
+		<td>{{ news.newsImg }}</td>
+	</tr>
+  <tr>
+		<td width="120px" class="warning text-right">โดย: </td>
+		<td>{{ news.newsSubmit }}</td>
+	</tr>
+</table> 
+
+ <br>
+
+<div align="center"><br>
+	<button class="btn btn-defaul" style="font-size: 19px"> <a href="#/newsMenu/news"> <i class="glyphicon glyphicon-backward"></i>&nbsp;ย้อนกลับ </a></button>
+</div>
+
+
+
+</div>

@@ -1,0 +1,146 @@
+         
+          <!-- Page Heading -->
+         <div class="row">
+            <div class="col-lg-12">
+               <h1 class="page-header"> แบบคัดกรอง <span style="color:#0174DF">ผู้ติดยาเสพติด</span>
+               </h1>
+            </div>
+         </div>
+        <div class="row">
+        	<div class="col-lg-12">
+        		<img class="img-responsive img-rounded" src="img/sirinthorn_words5.jpg" alt="ได้ทำงานช่วยเหลือคนอื่นถือว่าเป็นเกียรติทำให้เรามีความสุข สิรินธร ๒๙ พฤษภาคม ๒๕๕๖">
+        	</div>
+        </div><!-- /.row -->
+
+         <div class="row" >
+         <fieldset>
+         <h3>ข้อมูลผู้ป่วย</h3>
+         	<div class="col-lg-12">
+
+         		 <form role="form" class="form-horizontal" style="font-size:14px;" ng-submit="addPatient(patient)">
+
+         		    <div class="form-group"><!-- Form-group 1 -->
+
+         		    <label for="inputName" class="col-sm-1">ชื่อ</label>
+         		      <div class="col-sm-3">
+         		      <input type="text" class="form-control" placeholder="พิมพ์ชื่อ" ng-model="patient.name">
+         		      </div>
+
+         		      <label for="inputLastname" class="col-sm-1">นามสกุล</label>
+         		      <div class="col-sm-3">
+         		      <input type="text" class="form-control" placeholder="พิมพ์สกุล" ng-model="patient.lname">
+         		      </div>
+
+         		      <label for="inputAge" class="col-sm-1">อายุ</label>
+         		      <div class="col-sm-2">
+         		      <input type="text" class="form-control" placeholder="พิมพ์อายุ">
+         		      </div>
+
+         		   </div><!-- Form-group 1 -->
+
+         		   <div class="form-group"><!-- Form-group 2 -->
+
+         		      <label for="inputProvince1" class="col-sm-3">ที่อยู่ภูมิลำเนาเดิม&nbsp;(จังหวัด)</label>
+         		      <div class="col-sm-3">
+         		      <select name="province" class="form-control" ng-model="patient.provice">
+                     <option value="ยะลา">ยะลา</option>
+                     <option value="ปัตตานี">ปัตตานี</option>
+                     <option value="นราธิวาส">นราธิวาส</option>
+                     </select>
+         		      </div>
+
+
+         		      <label for="inputProvince2" class="col-sm-3">ที่อยู่ตามทะเบียนราษฎร์&nbsp;(จังหวัด)</label>
+         		      <div class="col-sm-3">
+         		      <select name="province" class="form-control">
+                     <option value="ยะลา">ยะลา</option>
+                     <option value="ปัตตานี">ปัตตานี</option>
+                     <option value="นราธิวาส">นราธิวาส</option>
+                     </select>
+         		      </div>
+
+         		      </div><!-- Form-group 2 -->
+
+         		      <div class="form-group"><!-- Form-group 3 -->
+
+         		      <label for="inputProvince3" class="col-sm-2">ที่อยู่ปัจจุบัน&nbsp; บ้านเลขที่</label>
+         		      <div class="col-sm-2">
+         		      <input type="text" class="form-control" placeholder="พิมพ์บ้านเลขที่">
+         		      </div>
+
+         		      <label for="inputLastname" class="col-sm-1">ซอย/ถนน</label>
+         		      <div class="col-sm-2">
+         		      <input type="text" class="form-control" placeholder="พิมพ์ซอย/ถนน">
+         		      </div>
+
+         		      <label for="inputAge" class="col-sm-2">หมู่บ้าน/ชุมชน</label>
+         		      <div class="col-sm-3">
+         		      <input type="text" class="form-control" placeholder="พิมพ์หมู่บ้าน/ชุมชน">
+         		      </div>
+
+         		      </div><!-- Form-group 3 -->
+
+         		      <div class="form-group"><!-- Form-group 4 -->
+
+         		      <label for="inputDistrict1" class="col-sm-2">ตำบล/แขวง</label>
+         		      <div class="col-sm-2">
+         		      <input type="text" class="form-control" placeholder="พิมพ์ตำบล/แขวง">
+         		      </div>
+
+         		      <label for="inputDistrict2" class="col-sm-2">อำเถอ/เขต</label>
+         		      <div class="col-sm-2">
+         		      <input type="text" class="form-control" placeholder="พิมพ์อำเถอ/เขต">
+         		      </div>
+
+         		      <label class="col-sm-1">จังหวัด</label>
+         		      <div class="col-sm-3">
+         		      <select name="province" class="form-control">
+         		      <option value="ยะลา">ยะลา</option>
+                      <option value="ปัตตานี">ปัตตานี</option>
+                      <option value="นราธิวาส">นราธิวาส</option>
+         		      </div>
+
+         		      </div><!-- Form-group 4 -->
+
+         		      <div class="form-group"><!-- Form-group 5 -->
+
+         		      <label for="inputDrugs" class="col-sm-1">อื่นๆ&nbsp;(ระบุ)</label>
+         		      <div class="col-sm-2">
+         		      <input type="text" class="form-control" placeholder="ระบุสารเสพติดอื่นๆ">
+         		      </div>
+
+         		      </div><!-- Form-group 5 -->
+
+         		      <div class="form-group"><!-- Form-group 6 -->
+
+         		      <label for="inputMainDrugs" class="col-sm-2">สารเสพติดหลักที่ใช้</label>
+         		      <div class="col-sm-3">
+                     <textarea class="form-control" rows="3" placeholder="พิมพ์สารเสพติดหลักที่ใช้"></textarea>
+         		      </div>
+
+         		      <label for="inputHowUse" class="col-sm-1">วิธีการใช้</label>
+         		      <div class="col-sm-3">
+         		      <input type="text" class="form-control" placeholder="พิมพ์วิธีการใช้">
+         		      <p class="help-block" style="color: #FF0000">** หากเสพโดยการฉีดถือว่าเป็น&nbsp;กลุ่มติด</p>
+         		      </div>
+         		      </div><!-- Form-group 6 -->
+
+         		      <div class="form-group"><!-- Form-group 7 -->
+
+         		      <label for="inputComorbid" class="col-sm-4">อาการแทรกซ้อนทางกาย/จิตเวช/สังคม (co-morbid) </label>
+         		      <div class="col-sm-8">
+         		      <input type="text" class="form-control" placeholder="พิมพ์อาการแทรกซ้อน">
+         		      </div>
+         		      </div><!-- Form-group 7 -->
+
+         		      <div class="control-group">
+         		      <!-- Button -->
+         		      <div class="controls">
+         		      <button class="btn btn-primary center-block" type="submit" ng-disabled="!patient.name || !patient.lname || !patient.provice">เริ่มทำแบบคัดกรอง</button>
+         		      </div>
+
+                            
+                 </form>
+         	</div>
+         	</fieldset>
+         </div>

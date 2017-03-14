@@ -53,7 +53,7 @@ app.controller('survay', function($route,$scope,$http,$routeParams){
         localStorage.setItem("survayNo",$scope.sid);
         localStorage.setItem("storageQuiz",JSON.stringify(storageQ));
         var survayNo2 = localStorage.getItem("survayNo");
-        window.location.href = 'http://localhost/bootstrapadmin6/index.html#/evaluate/quizform';
+        window.location.href = 'http://localhost:81/project2/user2/index.html#/evaluate/quizform';
     });
     
   }
@@ -133,7 +133,7 @@ app.controller('summary', function($route,$scope,$http,$routeParams){
         $scope.deleteSurvey(id);
         }
     });
-    window.location.href = 'http://localhost/bootstrapadmin6/index.html#/';
+    window.location.href = 'http://localhost:81/project2/user2/index.html#/';
   }
 
 });
@@ -165,14 +165,14 @@ app.controller('newsMenu', function($route,$scope,$http,$routeParams){
     $scope.addNews = function(info){
     console.log(info);
     $http.post('db/insertnews.php', info).then(function(response){
-      window.location.href = 'http://localhost/bootstrapadmin6/#/newsMenu/news';
+      window.location.href = 'http://localhost:81/project2/user2/#/newsMenu/news';
     });
     
     }
     // แก้ข่าว
     $scope.editNews = function(info){
     $http.post('db/updatenews.php', info).then(function(response){
-      window.location.href = 'http://localhost/bootstrapadmin6/#/newsMenu/news';
+      window.location.href = 'http://localhost:81/project2/user2/#/newsMenu/news';
     });
     
     }
@@ -202,7 +202,7 @@ app.controller('newsMenu', function($route,$scope,$http,$routeParams){
     $scope.addActiv = function(info){
     console.log(info);
     $http.post('db/insertactiv.php', info).then(function(response){
-      window.location.href = 'http://localhost/bootstrapadmin6/#/newsMenu/activ';
+      window.location.href = 'http://localhost:81/project2/user2/#/newsMenu/activ';
     });
     
     }
@@ -210,7 +210,7 @@ app.controller('newsMenu', function($route,$scope,$http,$routeParams){
     // แก้กิจกรรม
     $scope.editActiv = function(info){
     $http.post('db/updateactiv.php', info).then(function(response){
-      window.location.href = 'http://localhost/bootstrapadmin6/#/newsMenu/activ';
+      window.location.href = 'http://localhost:81/project2/user2/#/newsMenu/activ';
     });
     
     }

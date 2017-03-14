@@ -59,7 +59,7 @@
         "QuestionTypeId": 0,
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "ไม่เคย", "condition": false, "path": 0, "score": 0},
-            { "Id": 1056, "QuestionId": 1010, "Name": " เคยก่อน 3 เดือนที่ผ่านมา", "condition": false, "path": 0, "score": 3},
+            { "Id": 1056, "QuestionId": 1010, "Name": "เคยก่อน 3 เดือนที่ผ่านมา", "condition": false, "path": 0, "score": 3},
             { "Id": 1057, "QuestionId": 1010, "Name": "เคยในช่วง 3 เดือนที่ผ่านมา", "condition": false, "path": 0, "score": 6}],
         "QuestionType": { "Id": 1, "Name": "Multiple Choice", "IsActive": false }
     
@@ -70,7 +70,7 @@
         "QuestionTypeId": 0,
         "Options": [
             { "Id": 1055, "QuestionId": 1010, "Name": "ไม่เคย", "condition": false, "path": 0, "score": 0},
-            { "Id": 1056, "QuestionId": 1010, "Name": " เคยก่อน 3 เดือนที่ผ่านมา", "condition": false, "path": 0, "score": 3},
+            { "Id": 1056, "QuestionId": 1010, "Name": "เคยก่อน 3 เดือนที่ผ่านมา", "condition": false, "path": 0, "score": 3},
             { "Id": 1057, "QuestionId": 1010, "Name": "เคยในช่วง 3 เดือนที่ผ่านมา", "condition": false, "path": 0, "score": 6}],
         "QuestionType": { "Id": 1, "Name": "Multiple Choice", "IsActive": false }
     

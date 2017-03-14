@@ -20,7 +20,7 @@
     $scope.addQuizstorage = function(info){
         console.log(info);
         $http.post('php/insert.php', info).then(function(response){
-            window.location.href = 'http://localhost/kwangnoiitutorial/index.html#/';
+            window.location.href = 'http://localhost:81/project2/user2/index.html#/';
         });
         
     }
@@ -73,7 +73,7 @@
                 $scope.nextQuiz();
                 $scope.loadQuiz($scope.quizName);
             }else{
-                window.location.href = 'http://localhost/bootstrapadmin6/index.html#/test';
+                window.location.href = 'http://localhost:81/project2/user2/index.html#/test';
             }
         }else{
             if ($scope.config.autoMove == true && $scope.currentPage < $scope.totalItems){
@@ -107,7 +107,7 @@
                 localStorage.setItem("storageQuiz",JSON.stringify(storageQ4));
                 var addQ = localStorage.getItem("storageQuiz");
                 $scope.addQuiz(addQ);
-                window.location.href = 'http://localhost/bootstrapadmin6/index.html#/test';
+                window.location.href = 'http://localhost:81/project2/user2/index.html#/test';
             }
         }
     }

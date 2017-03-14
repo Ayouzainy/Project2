@@ -41,14 +41,14 @@ var myapp = angular.module('app',['chart.js','ngRoute']);
 		$scope.addNews = function(info){
 		console.log(info);
 		$http.post('db/insertnews.php', info).then(function(response){
-			window.location.href = 'http://localhost/Admin/Admin/#/newsMenu/news';
+			window.location.href = 'http://localhost:81/project2/Admin/#/newsMenu/news';
 		});
 		
 		}
 		// แก้ข่าว
 		$scope.editNews = function(info){
 		$http.post('db/updatenews.php', info).then(function(response){
-			window.location.href = 'http://localhost/Admin/Admin/#/newsMenu/news';
+			window.location.href = 'http://localhost:81/project2/Admin/#/newsMenu/news';
 		});
 		
 		}
@@ -78,7 +78,7 @@ var myapp = angular.module('app',['chart.js','ngRoute']);
 		$scope.addActiv = function(info){
 		console.log(info);
 		$http.post('db/insertactiv.php', info).then(function(response){
-			window.location.href = 'http://localhost/Admin/Admin/#/newsMenu/activ';
+			window.location.href = 'http://localhost:81/project2/Admin/#/newsMenu/activ';
 		});
 		
 		}
@@ -86,7 +86,7 @@ var myapp = angular.module('app',['chart.js','ngRoute']);
 		// แก้กิจกรรม
 		$scope.editActiv = function(info){
 		$http.post('db/updateactiv.php', info).then(function(response){
-			window.location.href = 'http://localhost/Admin/Admin/#/newsMenu/activ';
+			window.location.href = 'http://localhost:81/project2/Admin/#/newsMenu/activ';
 		});
 		
 		}
@@ -127,7 +127,7 @@ var myapp = angular.module('app',['chart.js','ngRoute']);
 		$scope.addVolun = function(info){
 		console.log(info);
 		$http.post('db/insertvolunteer.php', info).then(function(response){
-			window.location.href = 'http://localhost/Admin/Admin/#/volunteer/namelist_volunteer';
+			window.location.href = 'http://localhost:81/project2/Admin/#/volunteer/namelist_volunteer';
 		});
 		
 		}
@@ -135,7 +135,7 @@ var myapp = angular.module('app',['chart.js','ngRoute']);
 		// แก้กิจกรรม
 		$scope.editVolun = function(info){
 		$http.post('db/updatevolunteer.php', info).then(function(response){
-			window.location.href = 'http://localhost/Admin/Admin/#/volunteer/namelist_volunteer';
+			window.location.href = 'http://localhost:81/project2/Admin/#/volunteer/namelist_volunteer';
 		});
 		
 		}
@@ -172,7 +172,7 @@ var myapp = angular.module('app',['chart.js','ngRoute']);
 		// แก้กิจกรรม
 		$scope.editStaff = function(info){
 		$http.post('db/updatestafflist.php', info).then(function(response){
-			window.location.href = 'http://localhost/Admin/Admin/#/namelist';
+			window.location.href = 'http://localhost:81/project2/Admin/#/namelist';
 		});
 		
 		}
@@ -189,7 +189,7 @@ var myapp = angular.module('app',['chart.js','ngRoute']);
 		$scope.addStaff = function(info){
 		console.log(info);
 		$http.post('db/insertvolunteer.php', info).then(function(response){
-			window.location.href = 'http://localhost/Admin/Admin/#/namelist';
+			window.location.href = 'http://localhost:81/project2/Admin/#/namelist';
 		});
 		
 		}

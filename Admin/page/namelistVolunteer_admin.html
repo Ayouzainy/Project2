@@ -1,327 +1,79 @@
-<div id="page-wrapper">
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            <div class="container-fluid">
 
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            รายชื่อเจ้าหน้าที่จิตอาสา
-                        </h1>
+    <div id="page-wrapper" style="padding-top: 50px;">
+    <!-- Page Content -->
+    <div class="container" style="font-size: 18px">
+        <!-- Call to Action Well -->
+        <div class="row">
+            <div class="col-xs-12">
+                <img class="img-responsive img-rounded" src="img/sirinthorn_words5.jpg" alt="ได้ทำงานช่วยเหลือคนอื่นถือว่าเป็นเกียรติทำให้เรามีความสุข สิรินธร ๒๙ พฤษภาคม ๒๕๕๖">
+            </div>  <!-- /.col-lg-12 -->
+            </div><!-- /.row --><hr>
+
+        <!-- Content Row -->
+        <div class="col-xs-12">
+            <h3 style="color: #00BFFF;font-size: 30px"> รายชื่อวิทยากรจิตอาสา </h3><br>
+            </div>
+
+            <div class="col-xs-12"> <h3><i class="glyphicon glyphicon-search"></i>&nbsp;&nbsp;ค้นหาวิทยากรจิตอาสา..</h3><br>
+            <input type="text" class="form-control " ng-model="search" placeholder="ค้นหา"> 
+            </div>
+
+            
+
+            
+
+           
+
+        <div class="col-lg-12">
+        <br>
+        <div class="table-responsive">
+            <table class="table table table-hover table-striped" ng-init="getVolun()">
+                <thead>
+                    <tr class="active">
+                        <th>ลำดับ</th>                        
+                        <th>ชื่อ</th>                        
+                        <th>นามสกุล</th>
+                       <th>เพศ</th>
+                       <th>อายุ</th>
+                       <th>ที่อยู่</th>
+                       <th>ตัวเลือก</th>
+                       <th></th>
+                       <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="volun in vol | filter:search" >
+                        <td>{{ volun.id }}</td>
+                        <td>{{ volun.volunName }}</td>
+                        <td>{{ volun.volunLastname}}</td>
+                        <td>{{ volun.volunGender }}</td>
+                        <td>{{ volun.volunAge }}</td>
+                        <td>{{ volun.volunAddress }}</td>
                         
-                    </div>
-                </div>
-                <!-- /.row -->
+                        <td>
+                            <button class="btn btn-defaul"><i class="glyphicon glyphicon-eye-open"></i><a href="#/volunteer/namelist_volunteer/{{volun.id}}/show"style="font-size: 17px">&nbsp; &nbsp;แสดง</a></button>
+                        </td>
+                        <td>
+                            <button class="btn btn-defaul" ><i class="glyphicon glyphicon-edit"></i><a href="#/volunteer/namelist_volunteer/{{volun.id}}/update" style="font-size: 17px">&nbsp; &nbsp;แก้ไข</a></button>
+                        </td>
+                        <td>
+                            <button class="btn btn-defaul" name="btnConfirm" value="Confirm" ng-click="deleteVolun(volun.id)" ><i class="glyphicon glyphicon-trash"></i><a href="#/volunteer/namelist_volunteer/{{volun.id}}/delete" style="font-size: 17px">&nbsp; &nbsp;ลบ</a></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
 
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h2>รายชื่อเจ้าหน้าที่จิตอาสา ปัตตานี</h2>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Page</th>
-                                        <th>Visits</th>
-                                        <th>% New Visits</th>
-                                        <th>Revenue</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>/index.html</td>
-                                        <td>1265</td>
-                                        <td>32.3%</td>
-                                        <td>$321.33</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/about.html</td>
-                                        <td>261</td>
-                                        <td>33.3%</td>
-                                        <td>$234.12</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/sales.html</td>
-                                        <td>665</td>
-                                        <td>21.3%</td>
-                                        <td>$16.34</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/blog.html</td>
-                                        <td>9516</td>
-                                        <td>89.3%</td>
-                                        <td>$1644.43</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/404.html</td>
-                                        <td>23</td>
-                                        <td>34.3%</td>
-                                        <td>$23.52</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/services.html</td>
-                                        <td>421</td>
-                                        <td>60.3%</td>
-                                        <td>$724.32</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/blog/post.html</td>
-                                        <td>1233</td>
-                                        <td>93.2%</td>
-                                        <td>$126.34</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <h2>รายชื่อเจ้าหน้าที่จิตอาสา ยะลา</h2>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>Page</th>
-                                        <th>Visits</th>
-                                        <th>% New Visits</th>
-                                        <th>Revenue</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>/index.html</td>
-                                        <td>1265</td>
-                                        <td>32.3%</td>
-                                        <td>$321.33</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/about.html</td>
-                                        <td>261</td>
-                                        <td>33.3%</td>
-                                        <td>$234.12</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/sales.html</td>
-                                        <td>665</td>
-                                        <td>21.3%</td>
-                                        <td>$16.34</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/blog.html</td>
-                                        <td>9516</td>
-                                        <td>89.3%</td>
-                                        <td>$1644.43</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/404.html</td>
-                                        <td>23</td>
-                                        <td>34.3%</td>
-                                        <td>$23.52</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/services.html</td>
-                                        <td>421</td>
-                                        <td>60.3%</td>
-                                        <td>$724.32</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/blog/post.html</td>
-                                        <td>1233</td>
-                                        <td>93.2%</td>
-                                        <td>$126.34</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.row -->
 
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h2>รายชื่อเจ้าหน้าที่จิตอาสา นราธิวาส</h2>
-                        <div class="table-responsive">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Page</th>
-                                        <th>Visits</th>
-                                        <th>% New Visits</th>
-                                        <th>Revenue</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>/index.html</td>
-                                        <td>1265</td>
-                                        <td>32.3%</td>
-                                        <td>$321.33</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/about.html</td>
-                                        <td>261</td>
-                                        <td>33.3%</td>
-                                        <td>$234.12</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/sales.html</td>
-                                        <td>665</td>
-                                        <td>21.3%</td>
-                                        <td>$16.34</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/blog.html</td>
-                                        <td>9516</td>
-                                        <td>89.3%</td>
-                                        <td>$1644.43</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/404.html</td>
-                                        <td>23</td>
-                                        <td>34.3%</td>
-                                        <td>$23.52</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/services.html</td>
-                                        <td>421</td>
-                                        <td>60.3%</td>
-                                        <td>$724.32</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/blog/post.html</td>
-                                        <td>1233</td>
-                                        <td>93.2%</td>
-                                        <td>$126.34</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <h2>Striped Rows</h2>
-                        <div class="table-responsive">
-                            <table class="table table-hover table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>Page</th>
-                                        <th>Visits</th>
-                                        <th>% New Visits</th>
-                                        <th>Revenue</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>/index.html</td>
-                                        <td>1265</td>
-                                        <td>32.3%</td>
-                                        <td>$321.33</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/about.html</td>
-                                        <td>261</td>
-                                        <td>33.3%</td>
-                                        <td>$234.12</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/sales.html</td>
-                                        <td>665</td>
-                                        <td>21.3%</td>
-                                        <td>$16.34</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/blog.html</td>
-                                        <td>9516</td>
-                                        <td>89.3%</td>
-                                        <td>$1644.43</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/404.html</td>
-                                        <td>23</td>
-                                        <td>34.3%</td>
-                                        <td>$23.52</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/services.html</td>
-                                        <td>421</td>
-                                        <td>60.3%</td>
-                                        <td>$724.32</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/blog/post.html</td>
-                                        <td>1233</td>
-                                        <td>93.2%</td>
-                                        <td>$126.34</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.row -->
-
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h2>Contextual Classes</h2>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>Page</th>
-                                        <th>Visits</th>
-                                        <th>% New Visits</th>
-                                        <th>Revenue</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="active">
-                                        <td>/index.html</td>
-                                        <td>1265</td>
-                                        <td>32.3%</td>
-                                        <td>$321.33</td>
-                                    </tr>
-                                    <tr class="success">
-                                        <td>/about.html</td>
-                                        <td>261</td>
-                                        <td>33.3%</td>
-                                        <td>$234.12</td>
-                                    </tr>
-                                    <tr class="warning">
-                                        <td>/sales.html</td>
-                                        <td>665</td>
-                                        <td>21.3%</td>
-                                        <td>$16.34</td>
-                                    </tr>
-                                    <tr class="danger">
-                                        <td>/blog.html</td>
-                                        <td>9516</td>
-                                        <td>89.3%</td>
-                                        <td>$1644.43</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/404.html</td>
-                                        <td>23</td>
-                                        <td>34.3%</td>
-                                        <td>$23.52</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/services.html</td>
-                                        <td>421</td>
-                                        <td>60.3%</td>
-                                        <td>$724.32</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/blog/post.html</td>
-                                        <td>1233</td>
-                                        <td>93.2%</td>
-                                        <td>$126.34</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    
-                </div>
-                <!-- /.row -->
-
-                <!-- Footer -->
+            <br>
+            
+        </div> 
+</div><!-- /.content -->
+            <!-- Footer -->
                 <hr>
                 <footer>
                     <div class="row">
@@ -330,8 +82,5 @@
                         </div>
                     </div>
                 </footer>
-            </div>
-            <!-- /.container-fluid -->
+    </div><!-- /.wrapper -->
 
-        </div>
-        <!-- /#page-wrapper -->

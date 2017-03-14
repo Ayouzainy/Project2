@@ -103,7 +103,100 @@ var myapp = angular.module('app',['chart.js','ngRoute']);
 		});
 
 
+	//Volunteerlist Table Controller volunteer
 	
+	myapp.controller('volun', function($route,$scope,$http,$routeParams){
+		// โชว์รายชื่อวิทยากรจิตอาสาทั้งหมด
+		$scope.getVolun = function(){
+			$http.get('db/selectvolunteer.php').then(function(response){
+				$scope.vol = response.data;				
+			});
+		}
+
+		// โชว์กิจกรรมผ่านไอดี
+		$scope.showVolun = function(){
+		var id = $routeParams.id;
+		$http.post('db/selectvolunteerone.php', {'id':id}).then(function(response){
+			var emp = response.data;
+			$scope.id = id;
+			$scope.vol = emp[0];
+		});
+		}
+
+		// เพิ่มรายชื่อวอทยากรจิตอาสา
+		$scope.addVolun = function(info){
+		console.log(info);
+		$http.post('db/insertvolunteer.php', info).then(function(response){
+			window.location.href = 'http://localhost/Admin/Admin/#/volunteer/namelist_volunteer';
+		});
+		
+		}
+
+		// แก้กิจกรรม
+		$scope.editVolun = function(info){
+		$http.post('db/updatevolunteer.php', info).then(function(response){
+			window.location.href = 'http://localhost/Admin/Admin/#/volunteer/namelist_volunteer';
+		});
+		
+		}
+
+		// ลบกิจกรรม
+		$scope.deleteVolun = function(id){
+			var id = id;
+			$http.post('db/deletevolunteer.php', {'id':id}).then(function(response){
+				$route.reload();
+			});
+		}
+	});
+
+	//Stafflist Table Controller staff
+	
+	myapp.controller('staff', function($route,$scope,$http,$routeParams){
+		// โชว์รายชื่อเจ้าหน้าที่หน่วยงานญาลันนันบารูทั้งหมด
+		$scope.getStaff = function(){
+			$http.get('db/selectstafflist.php').then(function(response){
+				$scope.stafflist = response.data;				
+			});
+		}
+
+		// โชว์ายชื่อเจ้าหน้าที่หน่วยงานญาลันนันบารูผ่านไอดี
+		$scope.showStaff = function(){
+		var id = $routeParams.id;
+		$http.post('db/selectstafflistone.php', {'id':id}).then(function(response){
+			var emp = response.data;
+			$scope.id = id;
+			$scope.stafflist = emp[0];
+		});
+		}
+
+		// แก้กิจกรรม
+		$scope.editStaff = function(info){
+		$http.post('db/updatestafflist.php', info).then(function(response){
+			window.location.href = 'http://localhost/Admin/Admin/#/namelist';
+		});
+		
+		}
+
+		// ลบกิจกรรม
+		$scope.deleteStaff = function(id){
+			var id = id;
+			$http.post('db/deletestafflist.php', {'id':id}).then(function(response){
+				$route.reload();
+			});
+		}
+
+		// เพิ่มรายชื่อวอทยากรจิตอาสา
+		$scope.addStaff = function(info){
+		console.log(info);
+		$http.post('db/insertvolunteer.php', info).then(function(response){
+			window.location.href = 'http://localhost/Admin/Admin/#/namelist';
+		});
+		
+		}
+
+	});
+	
+	//ลิงค์หน้า
 	myapp.config(function($routeProvider){
 		$routeProvider
 		.when('/', {
@@ -159,51 +252,87 @@ var myapp = angular.module('app',['chart.js','ngRoute']);
 				}
 			)
 
-		
 
-		// .when('/newsMenu/newsCamp',{
-		// 			templateUrl: 'newsCamp.html'
-					
-		// 		}
-		// 	)
+
+		
 		.when('/survey', {
-					templateUrl:'admin/survey_admin.html'
+					templateUrl:'page/survey_admin.html'
 				}
 			)
 		.when('/survey/patient', {
-					templateUrl:'admin/survey_admin_patient.html',
+					templateUrl:'page/survey_admin_patient.html',
 					controller:'patientList'
 				}
 			)
 		.when('/survey/patient/:id/show', {
-					templateUrl:'admin/survey_admin_patientView.html',
+					templateUrl:'page/survey_admin_patientView.html',
 					controller:'patientView'
 				}
 			)
 		.when('/survey/chart', {
-					templateUrl:'admin/survey_admin_chart.html'
+					templateUrl:'page/survey_admin_chart.html'
 				}
 			)
 		.when('/volunteer', {
-					templateUrl:'admin/volunteerMenu_admin.html'
+					templateUrl:'page/volunteerMenu_admin.html'
 				}
 			)
 		.when('/register', {
-					templateUrl:'admin/register_admin.html'
+					templateUrl:'page/register_admin.html'
 				}
 			)
-		.when('/namelist', {
-					templateUrl:'admin/namelist_admin.html'
-				}
-			)
-		.when('/volunteer/register_volunteer',{
-			templateUrl: 'admin/registerVolunteer_admin.html'
+		
+		.when('/volunteer/namelist_volunteer',{
+			templateUrl: 'page/namelistVolunteer_admin.html',
+			controller: 'volun'
 			}
 		)
 		.when('/volunteer/namelist_volunteer',{
-			templateUrl: 'admin/namelistVolunteer_admin.html'
+			templateUrl: 'page/namelistVolunteer_admin.html',
+			controller: 'volun'
 			}
 		)
+		.when('/volunteer/namelist_volunteer/:id/show', {
+					templateUrl:'page/namelistVolunteerView.html', 
+					controller:'volun'
+				}
+		)
+
+		.when('/volunteer/insert', {
+					templateUrl:'page/registerVolunteer_admin.html',
+					controller:'volun'
+				}
+			)
+
+		.when('/volunteer/namelist_volunteer/:id/update', {
+					templateUrl:'page/volunteerEdit.html',
+					controller:'volun'
+				}
+			)
+
+		.when('/namelist',{
+			templateUrl: 'page/namelist_admin.html',
+			controller: 'staff'
+			}
+		)
+
+		.when('/namelist/:id/show', {
+					templateUrl:'page/staffView.html', 
+					controller:'staff'
+				}
+		)
+
+		.when('/namelist/:id/update', {
+					templateUrl:'page/staffEdit.html',
+					controller:'staff'
+				}
+			)
+
+		.when('/namelist/insert', {
+					templateUrl:'page/register_admin.html',
+					controller:'staff'
+				}
+			)
 		.otherwise({
 			redirectTo: '/'
 		});

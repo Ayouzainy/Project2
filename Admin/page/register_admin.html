@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            ลงทะเบียนหน่วยงานญาลันนันบารู
+                            ลงทะเบียนเจ้าหน้าที่เจ้าหน้าที่หน่วยงานญาลันนันบารู
                         </h1>                        
                     </div>
 
@@ -24,44 +24,46 @@
                 <hr>
                 <!-- Register Yalannanbaru -->
                 <div class="row">
-                    <h3 style="margin-left: 50px">ลงทะเบียนเจ้าหน้าที่หน่วยงานญาลันนันบารู</h3>
+                    <h3 style="margin-left: 50px">ลงทะเบียนเจ้าหน้าที่เจ้าหน้าที่หน่วยงานญาลันนันบารู</h3>
                     <br>
                     
-                    <!-- Register Yalannanbaru Form -->
+                    <!-- Register Volunteer Yalannanbaru Form -->
                     
                     <div class="row well text">
                         <div class="col-lg-6">
-                            <form role="form">
+                            <form role="form" ng-submit="addStaff(stafflist)">
                                 
                                 <!-- TextField Name -->
                                 <div class="form-group form-inline" style="margin-left: 50px">
                                 
                                     <label>ชื่อ: </label>
-                                    <input class="form-control" style="margin-left: 100px">                                
+                                    <input class="form-control" style="margin-left: 100px" ng-model="stafflist.staffName">                                
                                 </div>
 
                                 <!-- TextField LastName -->
                                 <div class="form-group form-inline" style="margin-left: 50px">
                                     
                                     <label>นามสกุล: </label>
-                                    <input class="form-control" style="margin-left: 65px">
+                                    <input class="form-control" style="margin-left: 65px" ng-model="stafflist.staffLastname">
                                 
                                 </div>
 
-                                <!-- Radio Button Inline Gender -->
-                                <div class="form-group" style="margin-left: 50px">
-                                
+                                <!-- Dropdown Gender -->
+                                <div class="form-group form-inline" style="margin-left: 50px">
                                     <label>เพศ: </label>
+                                    <select class="form-control" style="margin-left: 95px" ng-model="stafflist.staffGender">
+                                    <option selected>-- เลือกเพศ --</option>
+                                        <option value="ชาย">ชาย</option>
+                                        <option value="หญิง">หญิง</option>
+                                        
+                                    </select>
+                                </div>
 
-                                    <!-- Radio Button Male -->
-                                    <label class="radio-inline" style="margin-left: 95px">
-                                    <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked>ชาย
-                                    </label>
+                                <!-- TextField Age -->
+                                <div class="form-group form-inline" style="margin-left: 50px">
                                     
-                                    <!-- Radio Button Female -->
-                                    <label class="radio-inline">
-                                    <input type="radio" name="optionsRadiosInline" id="optionsRadiosInline1" value="option1" checked>หญิง
-                                    </label>
+                                    <label>อายุ: </label>
+                                    <input class="form-control" style="margin-left: 90px" ng-model="stafflist.staffAge">
                                 
                                 </div>
 
@@ -69,51 +71,51 @@
                                 <div class="form-group form-inline" style="margin-left: 50px">
                                 
                                 <label>ที่อยู่: </label>
-                                <textarea class="form-control" rows="3" style="margin-left: 90px"></textarea>
+                                <textarea class="form-control" rows="3" style="margin-left: 90px" ng-model="stafflist.staffAddress"></textarea>
                                 </div>
 
-                                <!-- Dropdown Institute -->
+                                <!-- TextField Job -->
                                 <div class="form-group form-inline" style="margin-left: 50px">
-                                    <label>สังกัดหน่วยงาน: </label>
-                                    <select class="form-control" style="margin-left: 20px">
-                                        <option>ปัตตานี</option>
-                                        <option>ยะลา</option>
-                                        <option>นราธิวาส</option>
-                                    </select>
+                                    <label>อาชีพ: </label>
+                                    <input class="form-control" style="margin-left: 75px" ng-model="stafflist.staffJob">
                                 </div>
+
+                                
 
                                 <!-- TextField E-mail -->
                                 <div class="form-group form-inline" style="margin-left: 50px">
                                     <label>อีเมลล์: </label>
-                                    <input class="form-control" style="margin-left: 75px">
+                                    <input class="form-control" style="margin-left: 75px" ng-model="stafflist.staffEmail">
                                 </div>
 
                                 <!-- TextField Tel No. -->
-                                <div class="form-group form-inline" style="margin-left: 50px">
+                                <div class="form-group form-inline" style="margin-left: 50px" ng-model="volunTel">
                                     <label>เบอร์โทรศัพท์: </label>
-                                    <input class="form-control" style="margin-left: 30px">
+                                    <input class="form-control" style="margin-left: 30px" ng-model="stafflist.staffTel">
                                 </div>
 
                                 <!-- TextField Username -->
                                 <div class="form-group form-inline" style="margin-left: 50px">
                                     <label>ชื่อผู้ใช้: </label>
-                                    <input class="form-control" style="margin-left: 70px">
+                                    <input class="form-control" style="margin-left: 70px" ng-model="stafflist.staffUser">
                                 </div>
 
                                 <!-- TextField Password -->
                                 <div class="form-group form-inline" style="margin-left: 50px">
                                     <label>รหัสผ่าน: </label>
-                                    <input class="form-control" style="margin-left: 65px">
+                                    <input class="form-control" style="margin-left: 65px" ng-model="stafflist.staffPswd">
                                 </div>
 
-                                <!-- TextField Password Again-->
-                                <div class="form-group form-inline" style="margin-left: 50px">
-                                    <label>รหัสผ่านอักครั้ง: </label>
-                                    <input class="form-control" style="margin-left: 20px">
-                                </div>
+                                
 
                                 <!-- Submit Buttion -->
-                                <button type="submit" class="btn btn-default">เสร็จสิ้น</button>
+                                 <div class="form-group"><!-- Form-group 6 -->
+                    <button class="btn btn-info" type="submit" style="margin-left: 45%;font-size: 20px">เสร็จสิ้น</button>
+                </div>
+
+                <div class="col-sm-6"><br>
+    <button class="btn btn-defaul" style="font-size: 19px"> <a href="#/"  > <i class="glyphicon glyphicon-backward"></i>&nbsp;ย้อนกลับ </a></button>
+</div>
 
                             </form>
                         </div>

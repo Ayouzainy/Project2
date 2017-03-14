@@ -1,0 +1,139 @@
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <div id="page-wrapper" style="padding-top: 75px;">
+
+        <!-- Page Content -->
+        <div class="container" style="color: #000000" >
+        <!-- Call to Action Well -->
+
+        <div class="row">
+        	<div class="col-lg-12">
+        		<img class="img-responsive img-rounded" src="img/sirinthorn_words5.jpg" alt="ได้ทำงานช่วยเหลือคนอื่นถือว่าเป็นเกียรติทำให้เรามีความสุข สิรินธร ๒๙ พฤษภาคม ๒๕๕๖">
+        	</div>
+        </div><!-- /.row -->
+
+		 <!-- Page Heading -->
+         <div class="row">
+         	<div class="col-lg-12">
+         		<h1 style="color:#0174DF"> แก้ไข <span style="color:#000">รายละเอียดวิทยากรจิตอาสา</span>
+                </h1>
+         	</div>
+         </div>
+
+         <div class="row" >
+         <fieldset>
+         	<div class="col-lg-12" ng-init="showStaff()">
+
+         		 <form role="form" class="form-horizontal" style="font-size:14px;" ng-submit="editStaff(stafflist)">
+
+         		    <div class="form-group"><!-- Form-group 1 -->
+
+                    <label for="staffName" class="col-sm-2">ชื่อ</label>
+                      <div class="col-sm-6">
+                      <input type="text" class="form-control" placeholder="ชื่อ" ng-model="stafflist.staffName"> <text>{{ stafflist.staffName }}</text>
+                      </div>
+                </div><!-- Form-group 1 -->
+
+                <div class="form-group"><!-- Form-group 2 -->
+
+                    <label for="staffLastname" class="col-sm-2">นามสกุล</label>
+                      <div class="col-sm-6">
+                      <input type="text" class="form-control" placeholder="นามสกุล" ng-model="stafflist.staffLastname"> <text>{{ stafflist.staffLastname }}</text>
+                      </div>
+                </div><!-- Form-group 2 -->
+
+                <div class="form-group"><!-- Form-group 3 -->
+
+                    <<label for="staffunGender" class="col-sm-2">เพศ</label>
+                      <div class="col-sm-6">
+                      <input type="text" class="form-control" placeholder="เพศ" ng-model="stafflist.staffunGender"> <text>{{ stafflist.staffunGender }}</text>
+                      </div>
+                </div><!-- Form-group 4-->
+
+                <div class="form-group"><!-- Form-group 3 -->
+
+                    <<label for="staffAge" class="col-sm-2">อายุ</label>
+                      <div class="col-sm-6">
+                      <input type="text" class="form-control" placeholder="อายุ" ng-model="stafflist.staffAge"> <text>{{ stafflist.staffAge }}</text>
+                      </div>
+                </div><!-- Form-group 4-->
+
+                <div class="form-group"><!-- Form-group 5 -->
+
+                    <<label for="staffAddress" class="col-sm-2">ที่อยู่</label>
+                      <div class="col-sm-6">
+                      <input type="text" class="form-control" placeholder="ที่อยู่" ng-model="stafflist.staffAddress"> <text>{{ stafflist.staffAddress }}</text>
+                      </div>
+                </div><!-- Form-group 5-->
+
+                <div class="form-group"><!-- Form-group 6 -->
+
+                    <<label for="staffJob" class="col-sm-2">อาชีพ</label>
+                      <div class="col-sm-6">
+                      <input type="text" class="form-control" placeholder="อาชีพ" ng-model="stafflist.staffJob"> <text>{{ stafflist.staffJob }}</text>
+                      </div>
+                </div><!-- Form-group 6-->
+
+                <div class="form-group"><!-- Form-group 7 -->
+
+                    <<label for="staffTel" class="col-sm-2">เบอร์โทรศัพท์</label>
+                      <div class="col-sm-6">
+                      <input type="text" class="form-control" placeholder="เบอร์โทรศัพท์" ng-model="stafflist.staffTel"> <text>{{ stafflist.staffTel }}</text>
+                      </div>
+                </div><!-- Form-group 7-->
+
+                <div class="form-group"><!-- Form-group 8 -->
+
+                    <<label for="staffEmail" class="col-sm-2">อีเมลล์</label>
+                      <div class="col-sm-6">
+                      <input type="text" class="form-control" placeholder="อีเมลล์" ng-model="stafflist.staffEmail"> <text>{{ stafflist.staffEmail }}</text>
+                      </div>
+                </div><!-- Form-group 8-->
+
+                <div class="form-group"><!-- Form-group 9 -->
+
+                    <<label for="staffUser" class="col-sm-2">ชื่อผู้ใช้</label>
+                      <div class="col-sm-6">
+                      <input type="text" class="form-control" placeholder="ชื่อผู้ใช้" ng-model="stafflist.staffUser"> <text>{{ stafflist.staffUser }}</text>
+                      </div>
+                </div><!-- Form-group 9-->
+
+                <div class="form-group"><!-- Form-group 10 -->
+
+                    <<label for="staffPswd" class="col-sm-2">รหัสผ่าน</label>
+                      <div class="col-sm-6">
+                      <input type="text" class="form-control" placeholder="รหัสผ่าน" ng-model="stafflist.staffPswd"> <text>{{ stafflist.staffPswd }}</text>
+                      </div>
+                </div><!-- Form-group 10-->
+
+
+
+
+                <div class="form-group"><!-- Form-group 11 -->
+                    <button class="btn btn-info" type="submit" style="margin-left: 45%;font-size: 20px">แก้ไข</button>
+                </div> <!-- Form-group 11 -->
+
+                 </form>
+         	</div>
+         	</fieldset>
+         </div>
+
+         <div class="col-sm-6"><br>
+    <button class="btn btn-defaul" style="font-size: 19px"> <a href="#/namelist"  > <i class="glyphicon glyphicon-backward"></i>&nbsp;ย้อนกลับ </a></button>
+</div>
+
+
+
+        </div><!-- /.content -->
+            <!-- Footer -->
+                <hr>
+                <footer>
+                    <div class="row">
+                        <div class="col-lg-12"><br>
+                            <p style="color: #844BB8 ;font-size: 17px" >© Yalannanbaru Anti-Drug Volunteer  2017</p>
+                        </div>
+                    </div>
+                </footer>
+    </div><!-- /.wrapper -->

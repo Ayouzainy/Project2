@@ -180,6 +180,7 @@ var myapp = angular.module('app',['chart.js','ngRoute']);
 		// ลบกิจกรรม
 		$scope.deleteStaff = function(id){
 			var id = id;
+			console.log(id);
 			$http.post('db/deletestafflist.php', {'id':id}).then(function(response){
 				$route.reload();
 			});

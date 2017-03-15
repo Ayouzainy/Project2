@@ -24,34 +24,38 @@
                 <hr>
                 <!-- Register Yalannanbaru -->
                 <div class="row">
+                <div class="col-lg-12">
                     <h3 style="margin-left: 50px">ลงทะเบียนเจ้าหน้าที่เจ้าหน้าที่หน่วยงานญาลันนันบารู</h3>
                     <br>
+                </div>
+                </div>
                     
                     <!-- Register Volunteer Yalannanbaru Form -->
-                    
+                    <div class="row" >
                     <div class="row well text">
-                        <div class="col-lg-6">
-                            <form role="form" ng-submit="addStaff(stafflist)">
+                    <fieldset>
+                    <div class="col-lg-12">
+                            <form role="form" ng-submit="addStaff(stafflist)" class="form-horizontal">
                                 
                                 <!-- TextField Name -->
-                                <div class="form-group form-inline" style="margin-left: 50px">
+                                <div class="form-group form-inline">
                                 
-                                    <label>ชื่อ: </label>
-                                    <input class="form-control" style="margin-left: 100px" ng-model="stafflist.staffName">                                
+                                    <label class="col-sm-1">ชื่อ: </label>
+                                    <input class="col-sm-3" class="form-control" style="margin-left: 50px" ng-model="stafflist.staffName">                                
                                 </div>
 
                                 <!-- TextField LastName -->
-                                <div class="form-group form-inline" style="margin-left: 50px">
+                                <div class="form-group form-inline">
                                     
-                                    <label>นามสกุล: </label>
-                                    <input class="form-control" style="margin-left: 65px" ng-model="stafflist.staffLastname">
+                                    <label class="col-sm-1">นามสกุล: </label>
+                                    <input class="col-sm-3" class="form-control" style="margin-left: 50px" ng-model="stafflist.staffLastname">
                                 
                                 </div>
 
                                 <!-- Dropdown Gender -->
-                                <div class="form-group form-inline" style="margin-left: 50px">
-                                    <label>เพศ: </label>
-                                    <select class="form-control" style="margin-left: 95px" ng-model="stafflist.staffGender">
+                                <div class="form-group form-inline">
+                                    <label class="col-sm-1">เพศ: </label>
+                                    <select class="col-sm-2" class="form-control" style="margin-left: 50px" ng-model="stafflist.staffGender">
                                     <option selected>-- เลือกเพศ --</option>
                                         <option value="ชาย">ชาย</option>
                                         <option value="หญิง">หญิง</option>
@@ -60,50 +64,50 @@
                                 </div>
 
                                 <!-- TextField Age -->
-                                <div class="form-group form-inline" style="margin-left: 50px">
+                                <div class="form-group form-inline" >
                                     
-                                    <label>อายุ: </label>
-                                    <input class="form-control" style="margin-left: 90px" ng-model="stafflist.staffAge">
+                                    <label class="col-sm-1" >อายุ: </label>
+                                    <input class="col-sm-2" class="form-control" style="margin-left: 50px" ng-model="stafflist.staffAge">
                                 
                                 </div>
 
                                 <!-- TextArea Adress -->
-                                <div class="form-group form-inline" style="margin-left: 50px">
+                                <div class="form-group form-inline">
                                 
-                                <label>ที่อยู่: </label>
-                                <textarea class="form-control" rows="3" style="margin-left: 90px" ng-model="stafflist.staffAddress"></textarea>
+                                <label class="col-sm-1" >ที่อยู่: </label>
+                                <textarea class="col-sm-3" class="form-control" rows="4" style="margin-left: 50px" ng-model="stafflist.staffAddress"></textarea>
                                 </div>
 
                                 <!-- TextField Job -->
-                                <div class="form-group form-inline" style="margin-left: 50px">
-                                    <label>สังกัด: </label>
-                                    <input class="form-control" style="margin-left: 75px" ng-model="stafflist.staffDepart">
+                                <div class="form-group form-inline" >
+                                    <label class="col-sm-1">สังกัด: </label>
+                                    <input class="col-sm-3" class="form-control" style="margin-left: 50px" ng-model="stafflist.staffDepart">
                                 </div>
 
                                 
 
                                 <!-- TextField E-mail -->
-                                <div class="form-group form-inline" style="margin-left: 50px">
-                                    <label>อีเมลล์: </label>
-                                    <input class="form-control" style="margin-left: 75px" ng-model="stafflist.staffEmail">
+                                <div class="form-group form-inline">
+                                    <label class="col-sm-1">อีเมลล์: </label>
+                                    <input class="col-sm-3" class="form-control" style="margin-left: 50px" ng-model="stafflist.staffEmail">
                                 </div>
 
                                 <!-- TextField Tel No. -->
-                                <div class="form-group form-inline" style="margin-left: 50px" ng-model="volunTel">
-                                    <label>เบอร์โทรศัพท์: </label>
-                                    <input class="form-control" style="margin-left: 30px" ng-model="stafflist.staffTel">
+                                <div class="form-group form-inline" ng-model="volunTel">
+                                    <label class="col-sm-2" >เบอร์โทรศัพท์: </label>
+                                    <input class="col-sm-3" class="form-control" style="margin-left: 10px" ng-model="stafflist.staffTel">
                                 </div>
 
                                 <!-- TextField Username -->
-                                <div class="form-group form-inline" style="margin-left: 50px">
-                                    <label>ชื่อผู้ใช้: </label>
-                                    <input class="form-control" style="margin-left: 70px" ng-model="stafflist.staffUser">
+                                <div class="form-group form-inline" >
+                                    <label class="col-sm-2">ชื่อผู้ใช้: </label>
+                                    <input class="col-sm-2" class="form-control" style="margin-left: 10px" ng-model="stafflist.staffUser">
                                 </div>
 
                                 <!-- TextField Password -->
-                                <div class="form-group form-inline" style="margin-left: 50px">
-                                    <label>รหัสผ่าน: </label>
-                                    <input class="form-control" style="margin-left: 65px" ng-model="stafflist.staffPswd">
+                                <div class="form-group form-inline">
+                                    <label class="col-sm-2">รหัสผ่าน: </label>
+                                    <input class="col-sm-3" class="form-control" style="margin-left: 10px" ng-model="stafflist.staffPswd">
                                 </div>
 
                                 
@@ -113,12 +117,13 @@
                     <button class="btn btn-info" type="submit" style="margin-left: 45%;font-size: 20px">เสร็จสิ้น</button>
                 </div>
 
-                <div class="col-sm-6"><br>
+                <br>
     <button class="btn btn-defaul" style="font-size: 19px"> <a href="#/"  > <i class="glyphicon glyphicon-backward"></i>&nbsp;ย้อนกลับ </a></button>
-</div>
 
                             </form>
                         </div>
+                        </fieldset>
+
                     </div>
 
                 </div>

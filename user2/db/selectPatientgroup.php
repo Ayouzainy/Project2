@@ -5,7 +5,7 @@ include 'dbConfig.php';
 
 $sql = "SELECT survey.surveyNo,patientlist.Name,patientlist.Lastname,SUM(surveyanswer.score) totalScore FROM surveyanswer INNER JOIN survey ON surveyanswer.suveyNo = survey.surveyNo
 INNER JOIN patientlist ON survey.patientNo = patientlist.patientNo
-WHERE suveyNo = '$data' GROUP BY surveyanswer.suveyNo";
+WHERE surveyanswer.suveyNo = '$data' AND surveyanswer.questionType = 0 GROUP BY surveyanswer.suveyNo, surveyanswer.questionType";
 $result = $conn->query($sql);
 if($result->num_rows > 0){
 	// output data of each noe

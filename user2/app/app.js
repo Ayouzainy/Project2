@@ -319,6 +319,11 @@ app
           controller:'activ'
         }
       )
+    .when('/newsMenu/activ/insert', {
+          templateUrl:'page/activInsert.html',
+          controller:'activ'
+        }
+      )
 
       .otherwise({
           redirectTo: '/'

@@ -24,34 +24,38 @@
                 <hr>
                 <!-- Register Yalannanbaru -->
                 <div class="row">
+                <div class="col-lg-12">
                     <h3 style="margin-left: 50px">ลงทะเบียนเจ้าหน้าที่จิตอาสา</h3>
                     <br>
+                </div>
+                </div>
                     
                     <!-- Register Volunteer Yalannanbaru Form -->
-                    
+                    <div class="row" >
                     <div class="row well text">
-                        <div class="col-lg-6">
-                            <form role="form" ng-submit="addVolun(vol)">
+                    <fieldset>
+                        <div class="col-lg-12">
+                            <form role="form" ng-submit="addVolun(vol)" class="form-horizontal">
                                 
                                 <!-- TextField Name -->
-                                <div class="form-group form-inline" style="margin-left: 50px">
+                                <div class="form-group form-inline">
                                 
-                                    <label>ชื่อ: </label>
-                                    <input class="form-control" style="margin-left: 100px" ng-model="vol.volunName">                                
+                                    <label class="col-sm-1">ชื่อ: </label>
+                                    <input class="col-sm-3"class="form-control" style="margin-left: 50px" ng-model="vol.volunName">                                
                                 </div>
 
                                 <!-- TextField LastName -->
-                                <div class="form-group form-inline" style="margin-left: 50px">
+                                <div class="form-group form-inline">
                                     
-                                    <label>นามสกุล: </label>
-                                    <input class="form-control" style="margin-left: 65px" ng-model="vol.volunLastname">
+                                    <label class="col-sm-1">นามสกุล: </label>
+                                    <input class="col-sm-3"class="form-control" style="margin-left: 50px" ng-model="vol.volunLastname">
                                 
                                 </div>
 
                                 <!-- Dropdown Gender -->
-                                <div class="form-group form-inline" style="margin-left: 50px">
-                                    <label>เพศ: </label>
-                                    <select class="form-control" style="margin-left: 95px" ng-model="vol.volunGender">
+                                <div class="form-group form-inline">
+                                    <label class="col-sm-1" >เพศ: </label>
+                                    <select class="col-sm-2" class="form-control" style="margin-left: 50px" ng-model="vol.volunGender">
                                     <option selected>-- เลือกเพศ --</option>
                                         <option value="ชาย">ชาย</option>
                                         <option value="หญิง">หญิง</option>
@@ -60,50 +64,50 @@
                                 </div>
 
                                 <!-- TextField Age -->
-                                <div class="form-group form-inline" style="margin-left: 50px">
+                                <div class="form-group form-inline">
                                     
-                                    <label>อายุ: </label>
-                                    <input class="form-control" style="margin-left: 90px" ng-model="vol.volunAge">
+                                    <label class="col-sm-1">อายุ: </label>
+                                    <input class="col-sm-2"class="form-control" style="margin-left: 50px" ng-model="vol.volunAge">
                                 
                                 </div>
 
                                 <!-- TextArea Adress -->
-                                <div class="form-group form-inline" style="margin-left: 50px">
+                                <div class="form-group form-inline">
                                 
-                                <label>ที่อยู่: </label>
-                                <textarea class="form-control" rows="3" style="margin-left: 90px" ng-model="vol.volunAddress"></textarea>
+                                <label class="col-sm-1">ที่อยู่: </label>
+                                <textarea class="col-sm-3"class="form-control" rows="4" style="margin-left: 50px" ng-model="vol.volunAddress"></textarea>
                                 </div>
 
                                 <!-- TextField Job -->
-                                <div class="form-group form-inline" style="margin-left: 50px">
-                                    <label>อาชีพ: </label>
-                                    <input class="form-control" style="margin-left: 75px" ng-model="vol.volunJob">
+                                <div class="form-group form-inline">
+                                    <label class="col-sm-1">อาชีพ: </label>
+                                    <input class="col-sm-3"class="form-control" style="margin-left: 50px" ng-model="vol.volunJob">
                                 </div>
 
                                 
 
                                 <!-- TextField E-mail -->
-                                <div class="form-group form-inline" style="margin-left: 50px">
-                                    <label>อีเมลล์: </label>
-                                    <input class="form-control" style="margin-left: 75px" ng-model="vol.volunEmail">
+                                <div class="form-group form-inline">
+                                    <label class="col-sm-1">อีเมลล์: </label>
+                                    <input class="col-sm-3"class="form-control" style="margin-left: 50px" ng-model="vol.volunEmail">
                                 </div>
 
                                 <!-- TextField Tel No. -->
-                                <div class="form-group form-inline" style="margin-left: 50px" ng-model="volunTel">
-                                    <label>เบอร์โทรศัพท์: </label>
-                                    <input class="form-control" style="margin-left: 30px" ng-model="vol.volunTel">
+                                <div class="form-group form-inline"  ng-model="volunTel">
+                                    <label class="col-sm-2">เบอร์โทรศัพท์: </label>
+                                    <input class="col-sm-2" class="form-control" style="margin-left: 10px" ng-model="vol.volunTel">
                                 </div>
 
                                 <!-- TextField Username -->
-                                <div class="form-group form-inline" style="margin-left: 50px">
-                                    <label>ชื่อผู้ใช้: </label>
-                                    <input class="form-control" style="margin-left: 70px" ng-model="vol.volunUser">
+                                <div class="form-group form-inline">
+                                    <label class="col-sm-2" >ชื่อผู้ใช้: </label>
+                                    <input class="col-sm-2" class="form-control" style="margin-left: 10px" ng-model="vol.volunUser">
                                 </div>
 
                                 <!-- TextField Password -->
-                                <div class="form-group form-inline" style="margin-left: 50px">
-                                    <label>รหัสผ่าน: </label>
-                                    <input class="form-control" style="margin-left: 65px" ng-model="vol.volunPswd">
+                                <div class="form-group form-inline" >
+                                    <label class="col-sm-2">รหัสผ่าน: </label>
+                                    <input class="col-sm-2" class="form-control" style="margin-left:10px" ng-model="vol.volunPswd">
                                 </div>
 
                                 
@@ -119,6 +123,7 @@
 
                             </form>
                         </div>
+                        </fieldset>
                     </div>
 
                 </div>
